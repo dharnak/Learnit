@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Niv from './components/Niv'
+import Footer from './components/Footer'
+import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Instructor from './pages/Instructor';
+import Udemybusness from './pages/Udemybusness';
+import Mylearning from './pages/Mylearning';
+import Backend from './pages/Backend';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <div>
+         <Router>
+          <Niv/>
+             <Routes>
+              <Route path="/Home" element={<Home/>} />
+              <Route path="/Mylearning" element={<Instructor/>} />
+              <Route path="/about" element={<Udemybusness />} />    
+              <Route path="/UdemyBusness" element={<Mylearning/>} />
+               <Route path="/backendcall" element={<Backend/>} />
+             </Routes>
+          <Footer/>
+         </Router>
+   </div>
+  )
 }
-
-export default App;

@@ -1,0 +1,26 @@
+.learnpage9{
+  margin-left: 40px;
+}
+.page9{
+      padding: 120px;
+      position: relative;
+    }
+.pagesum{
+   border: 1px solid rgb(179, 179, 179);
+   height: 40px;
+   width: 200px;
+   font-size: 10px;
+   margin-left: 10px;
+   margin-bottom: 10px;
+   padding-top: 18px;
+   padding-left: 20px;
+}
+.page9{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+.pagesum:hover{
+  background-color: rgb(241, 240, 240);
+}
